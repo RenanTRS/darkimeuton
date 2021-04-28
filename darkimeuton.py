@@ -1,11 +1,14 @@
-palavra = str(input('Digite seu nome ou apelido: ')).upper().strip()
+palavra = str(input('Digite seu nome ou apelido: ')).upper().strip().split()[0]
 
 qtd = len(palavra)
 p = []
 
+#for logic
 for c in range(0, qtd):
     if palavra[c] == 'A':
         p.append(4)
+    elif palavra[c] == 'B':
+        p.append(8)
     elif palavra[c] == 'G':
         p.append(6)
     elif palavra[c] == 'E':
@@ -23,7 +26,7 @@ for c in range(0, qtd):
     else:
         p.append(palavra[c])
 
-for x in p:
+for x in p: #varrer array
     print(x, end='')
 
-print('')
+print('') #break line
